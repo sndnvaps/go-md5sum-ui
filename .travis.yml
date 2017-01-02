@@ -3,6 +3,7 @@ go:
   - 1.7
 
 script:
+   - apt-get install -y libgtk-3-0
    - go build
 deploy:
   provider: releases
