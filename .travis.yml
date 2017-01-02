@@ -3,11 +3,10 @@ language: go
 go:
   - 1.7
 before_install:
-   - apt-get install -y gcc g++
-   - apt-get install -y libgtk-3-0
-   - go get
+  - sudo apt-get install -y libgtk-3-0
+  - go get -d -v -t
 script:
-   - go build
+  - go build
 deploy:
   provider: releases
   api_key: "${GH_DEPLOY_KEY}"
