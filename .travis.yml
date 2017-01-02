@@ -2,11 +2,11 @@ sudo: required
 language: go
 go:
   - 1.7
-before_script:
+before_install:
    - apt-get install -y gcc g++
    - apt-get install -y libgtk-3-0
+   - go get
 script:
-   - go get -d -v -t
    - go build
 deploy:
   provider: releases
