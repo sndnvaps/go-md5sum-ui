@@ -1,0 +1,13 @@
+language: go
+go:
+  - 1.7
+
+script:
+   - go build
+deploy:
+  provider: releases
+  api_key: "${GH_DEPLOY_KEY}"
+  file: "go-md5sum-ui"
+  skip_cleanup: true
+  on:
+    tags: true
